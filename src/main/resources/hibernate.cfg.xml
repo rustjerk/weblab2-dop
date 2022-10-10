@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "https://hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+        <property name="hibernate.current_session_context_class">thread</property>
+        <property name="hbm2ddl.auto">update</property>
+<!--        <property name="show_sql">true</property>-->
+
+        <mapping class="ru.sigsegv.dopamine.resource.student.Student"/>
+        <mapping class="ru.sigsegv.dopamine.resource.studygroup.StudyGroup"/>
+        <mapping class="ru.sigsegv.dopamine.resource.studystream.StudyStream"/>
+        <mapping class="ru.sigsegv.dopamine.resource.schedule.Schedule"/>
+        <mapping class="ru.sigsegv.dopamine.resource.schedule.ScheduleEntry"/>
+    </session-factory>
+</hibernate-configuration>
